@@ -37,7 +37,7 @@ Not in org-journal-search buffer."
                      (org-journal-file (org-journal--get-entry-path time))
                      (date-string "not found")
                      (header-string "not found"))
-                (if (re-search-forward "\\(.*\\)\\*\\* \\(.*\\)")
+                (if (re-search-forward "\\([^*]*\\)\\*\\*+ \\(.*\\)")
                     (progn
                       (setq date-string (match-string 1))
                       (setq header-string (match-string 2))))
